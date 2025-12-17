@@ -502,8 +502,8 @@ def generate_gemini_report(team, merged, corr_val, stats, news_df, sent_merged, 
     try:
         res = model.generate_content(prompt)
         return res.text
-    except:
-        return "리포트 생성 중 오류가 발생했습니다."
+    except Exception as e:
+        return f"리포트 생성 중 오류: {e}"
 
 
 # =========================================================
@@ -795,4 +795,5 @@ st.markdown("---")
 st.caption("""
 💡 **본 서비스에서 제공되는 모든 분석 및 권고는 정보 제공 목적이며,  
 투자·재정적 의사결정에 대한 책임은 전적으로 사용자 본인에게 있습니다.**
+
 """)

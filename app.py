@@ -14,8 +14,8 @@ from datetime import datetime
 # 0. 기본 설정 & API 키
 # =========================================================
 # 실제 배포 시에는 st.secrets를 사용하는 것이 좋습니다.
-FOOTBALL_API_KEY = "d69efb6a4cc6101411098c976504bed46179c0b1655af0c378b4df7d8f9af5b7"
-GEMINI_API_KEY = "AIzaSyBLF5RDLC0WRtMTA3bpK4teb1tKN4J2yqI"
+FOOTBALL_API_KEY = st.secrets["FOOTBALL_API_KEY"]
+GEMINI_API_KEY = st.secrets["GEMINI_API_KEY]
 
 st.set_page_config(
     page_title="FIELD GRID – 구단 운영 AI 리포트",
@@ -797,3 +797,4 @@ st.caption("""
 투자·재정적 의사결정에 대한 책임은 전적으로 사용자 본인에게 있습니다.**
 
 """)
+
